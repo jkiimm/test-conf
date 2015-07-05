@@ -1,7 +1,5 @@
 'use strict';
 
-// some..
-// some..
 angular.module('testConfApp', [
   'ngCookies',
   'ngResource',
