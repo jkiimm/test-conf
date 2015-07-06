@@ -665,6 +665,8 @@ module.exports = function (grunt) {
     'usemin'
   ]);
 
+  grunt.registerTask('deploy', 'buildcontrol:test');
+
   grunt.registerTask('default', [
     'newer:jshint',
     'test',
