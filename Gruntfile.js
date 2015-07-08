@@ -401,7 +401,7 @@ module.exports = function (grunt) {
       },
       test: {
         options: {
-          remote: 'ssh://ligeek@ligeek.org/home/ligeek/git/test-conf.git',
+          remote: 'ssh://ubuntu@52.5.145.162/git-bare/test-conf.git',
           branch: 'master'
         }
       },
