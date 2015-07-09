@@ -7,3 +7,7 @@ before_script:
   - gem install sass
   - bower install
 services: mongodb
+after_success:
+  - chmod 600 .travis/deploy_key.pem
+  - ssh-add .travis/deploy_key.pem
+  - grunt deploy
