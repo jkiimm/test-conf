@@ -13,7 +13,7 @@ MAINTAINER Anand Mani Sankar
 RUN apt-get update
 
 # Install necessary tools
-RUN apt-get install -y nano wget dialog net-tools
+RUN apt-get install -y wget dialog net-tools
 
 # Download and Install Nginx
 RUN apt-get install -y nginx  

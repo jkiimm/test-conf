@@ -401,7 +401,7 @@ module.exports = function (grunt) {
       },
       test: {
         options: {
-          remote: 'ssh://ubuntu@52.5.145.162/git-bare/test-conf.git',
+          remote: 'ubuntu@52.5.145.162:git-bare/test-conf.git',
           branch: 'master'
         }
       },
