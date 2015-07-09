@@ -21,4 +21,4 @@ node3:
 mongo:
     build: ./mongo
     ports:
-        - "27017"
+        - "27017:27017"
