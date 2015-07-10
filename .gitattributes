@@ -1,2 +1,2 @@
 * text=auto
-server/config/local.env.js filter=git-crypt diff=git-crypt
+./server/config/local.env.js filter=git-crypt diff=git-crypt
