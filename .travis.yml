@@ -11,9 +11,8 @@ before_script:
 - bower install
 services: mongodb
 after_success:
-- mv ~/.ssh/id_rsa .travis/deploy_key.pem
 - ssh-add .travis/deploy_key.pem
 - grunt deploy
 before_install:
 - openssl aes-256-cbc -K $encrypted_c9d3d02509c8_key -iv $encrypted_c9d3d02509c8_iv
-  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
+  -in id_rsa.enc -out .travis/deploy_key.pem -d
