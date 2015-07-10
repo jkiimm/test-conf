@@ -10,3 +10,6 @@ before_script:
 - gem install sass
 - bower install
 services: mongodb
+before_install:
+- openssl aes-256-cbc -K $encrypted_c9d3d02509c8_key -iv $encrypted_c9d3d02509c8_iv
+  -in local.env.js.enc -out server/config/local.env.js -d
