@@ -1,7 +1,6 @@
 language: node_js
 node_js:
-- '0.10'
-- '0.11'
+- '0.12'
 before_script:
 - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - git config --global user.email "ligeek49@gmail.com"
@@ -12,4 +11,10 @@ before_script:
 services: mongodb
 before_install:
 - openssl aes-256-cbc -K $encrypted_c9d3d02509c8_key -iv $encrypted_c9d3d02509c8_iv
-  -in local.env.js.enc -out server/config/local.env.js -d
+  -in encrypt.tar.enc -out encrypt.tar -d
+- tar xvf encrypt.tar
+after_success:
+  - eval "$(ssh-agent -s)"
+  - chmod 600 .travis/id_rsa
+  - ssh-add .travis/id_rsa
+  - grunt deploy
